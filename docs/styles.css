@@ -38,6 +38,10 @@ a {
   transition: color 0.3s;
 }
 
+.mobile-switch { 
+  display: none; 
+}
+
 button {
   border-radius: 20px;
   border: none;
@@ -257,10 +261,70 @@ input[type="checkbox"] {
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
-    min-height: 600px;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Hide the overlay and its buttons on mobile */
+  .overlay-container {
+    display: none;
+  }
+
+  .form-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding: 40px 0;
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 1;
+    display: flex;
+    align-items: center;
   }
   
+  .sign-up-container {
+    display: none; /* Hidden by default */
+  }
+
+  .container.right-panel-active .sign-in-container {
+    display: none;
+  }
+
+  .container.right-panel-active .sign-up-container {
+    display: flex;
+  }
+
   form {
-    padding: 0 30px;
+    padding: 0 40px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 10px 12px;
+    margin: 6px 0;
+  }
+
+  button {
+    padding: 10px 40px;
+    margin-top: 15px;
+  }
+  
+  .social-container {
+    margin: 15px 0;
+  }
+
+  /* Show mobile-only switch links */
+  .mobile-switch {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
   }
 }
