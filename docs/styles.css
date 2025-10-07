@@ -264,6 +264,9 @@ input[type="checkbox"] {
     min-height: 100vh;
     border-radius: 0;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Hide the overlay and its buttons on mobile */
@@ -275,14 +278,12 @@ input[type="checkbox"] {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 100%;
-    padding: 40px 0;
     transition: none;
     transform: none !important;
     opacity: 1 !important;
     z-index: 1;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
   
   .sign-up-container {
@@ -300,6 +301,8 @@ input[type="checkbox"] {
   form {
     padding: 0 40px;
     height: auto;
+    width: 100%;
+    max-width: 420px; /* Constrain form width on larger mobile screens */
   }
 
   h1 {
